@@ -22,3 +22,23 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+input1 = input("enter month")
+input2 = input("enter year")
+
+def calend(*args):
+  if len(args) == 0:
+    print(calendar.monthcalendar(datetime.now().year, datetime.now().month))
+  elif len(args) == 1:
+    print(calendar.monthcalendar(datetime.now().year, args[0]))
+  elif len(args) == 2:
+    print(calendar.monthCalendar(args[1], args[0]))
+  else:
+    print("You fucked this all up")
+
+
+  # print(len(args))
+
+calend(input1, input2)
+# print(calendar.monthcalendar(datetime.now().year, datetime.now().month))
+
